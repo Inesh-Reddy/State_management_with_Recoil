@@ -41,6 +41,8 @@
                     })
 
     - Using atom : Depending on our usecase we use `useRecoilState, useRecoilValue, useSetRecoilState.`
+
+    - useRecoilValue :
                 function CountRenderer(){
                 // if we only need state value {ie; only count in const[count, setCount]=useState(0);}
                 const count = useRecoilValue(countAtom);
@@ -49,6 +51,7 @@
                 </div>
                 }
 
+    - useRecoilState :
                 function Buttons(){
                 const [count, setCount] = useRecoilState(countAtom);
                 return <div>
