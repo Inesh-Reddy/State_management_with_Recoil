@@ -61,6 +61,26 @@
                 </div>
                 }
 
+
+
+- useSetRecoilState : 
+
+    This is beneficial for performance reasons. When a component subscribes to a piece of state (for example, by using useRecoilState or useRecoilValue), it will re-render whenever that state changes. If a component only needs to set state and doesn’t care about when it changes, using useSetRecoilState prevents unnecessary re-renders because it does not subscribe the component to the state.
+
+    
+            - useSetRecoilState :
+                function Buttons(){
+                    const setCount = useSetRecoilState(countAtom);
+                    return <div>
+                        <button onClick={()=>{
+                        setCount(count=>count+1)
+                        }} >Increase</button>
+                        <button onClick={()=>{
+                        setCount(count=>count-1)
+                        }} >Decrease</button>
+                    </div>
+                }
+
     - Recoil Root:
                 This needs to be use in the App component{can be use in lower the order also...but general practice} to wrap the components that need atom/s.
                 function App() {
