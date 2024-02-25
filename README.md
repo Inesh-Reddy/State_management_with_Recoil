@@ -86,7 +86,7 @@
 
 - Recoil Root:
   
-                This needs to be use in the App component{can be use in lower the order also...but general practice} to wrap the components that need atom/s.
+    This needs to be use in the App component{can be use in lower the order also...but general practice} to wrap the components that need atom/s.
 
                 
                 function App() {
@@ -100,7 +100,8 @@
                 }
 
  - Selector :
-                In Recoil, a selector represents a piece of derived state. You can think of derived state as the output of passing state to a pure function {not a component} that derives a new value from the said state. Derived state is a powerful concept because it lets us build dynamic data that depends on other data.
+   
+    In Recoil, a selector represents a piece of derived state. You can think of derived state as the output of passing state to a pure function {not a component} that derives a new value from the said state. Derived state is a powerful concept because it lets us build dynamic data that depends on other data.
 
                     import { atom, selector } from "recoil";
                     //state
