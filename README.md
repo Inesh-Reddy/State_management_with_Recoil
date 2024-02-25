@@ -95,3 +95,22 @@
                     )
                 }
 
+    - Selector :
+                In Recoil, a selector represents a piece of derived state. You can think of derived state as the output of passing state to a pure function {not a component} that derives a new value from the said state. Derived state is a powerful concept because it lets us build dynamic data that depends on other data.
+
+                    import { atom, selector } from "recoil";
+                    //state
+                    export const countAtom = atom({
+                        key:"countAtom",
+                        default:0
+                    })
+
+                    //derived state from countAtom state.
+                    export const evenSelector = selector({
+                        key: "evenSelector",
+                        get: ({get})=>{
+                            const count = get(countAtom);
+                            return count%2===0;
+                        }
+                    })
+
